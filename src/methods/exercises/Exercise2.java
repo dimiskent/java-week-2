@@ -18,8 +18,12 @@ public class Exercise2
 
         // Example usage
         obj.publicMethod();
-
-        // TODO: Call other methods here
+        obj.privateMethod();
+        obj.protectedMethod();
+        obj.defaultMethod();
+        obj.finalMethod();
+        // this needs to be called normally, not from a new instance
+        staticMethod();
     }
     // Example: public method
     public void publicMethod()
@@ -27,14 +31,23 @@ public class Exercise2
         System.out.println("Public method called");
     }
 
-    // TODO: Add protectedMethod()
+    protected void protectedMethod() {
+        System.out.println("Protected method called.");
+    }
 
-    // TODO: Add defaultMethod()
+    void defaultMethod() {
+        System.out.println("Default method called.");
+    }
 
-    // TODO: Add privateMethod()
+    private void privateMethod() {
+        System.out.println("Private method called");
+    }
 
-    // TODO: Add staticMethod()
+    public static void staticMethod() {
+        System.out.println("Static method called.");
+    }
 
-    // TODO: Add finalMethod()
-
+    public final void finalMethod() {
+        System.out.println("Final method called.");
+    }
 }

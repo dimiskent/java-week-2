@@ -12,7 +12,19 @@ public class Exercise1
 {
     public static void main(String[] args)
     {
-        // TODO: Create Book objects and test methods
+        Book myBook = new Book();
+        myBook.title = "Romeo & Juliette";
+        myBook.author = "William Shakespeare";
+        myBook.displayInfo();
     }
 }
 
+class Book {
+    String title = "Sample Title";
+    String author = "Sample Author";
+    public void displayInfo() {
+        System.out.println("Book information.");
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+    }
+}

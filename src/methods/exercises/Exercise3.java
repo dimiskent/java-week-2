@@ -19,7 +19,8 @@ public class Exercise3
         Calculator calc = new Calculator();
 
         System.out.println("Add = " + calc.add(3, 5));
-        // TODO: Test multiply methods
+        System.out.println("Multiply = " + calc.multiply(2.5, 3));
+        System.out.println("Multiply = " + calc.multiply(3, 5));
 
         Animal a1 = new Animal();
         a1.sound();
@@ -27,7 +28,8 @@ public class Exercise3
         Animal a2 = new Dog();
         a2.sound();
 
-        // TODO: Create Cat object and call sound()
+        Animal a3 = new Cat();
+        a3.sound();
     }
 }
 
@@ -39,9 +41,9 @@ class Calculator
         return a + b;
     }
 
-    // TODO: Write multiply(int a, int b)
+    public int multiply(int a, int b) { return a * b; }
 
-    // TODO: Write multiply(double a, double b)
+    public double multiply(double a, double b) { return a * b; }
 }
 
 class Animal
@@ -61,4 +63,9 @@ class Dog extends Animal
     }
 }
 
-// TODO: Create Cat class that overrides sound()
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+}

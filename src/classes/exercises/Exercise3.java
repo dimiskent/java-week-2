@@ -12,6 +12,20 @@ public class Exercise3
 {
     public static void main(String[] args)
     {
-        // TODO: Create Bike object and test methods
+        Bike bike = new Bike();
+        bike.start();
+        bike.ride();
+    }
+}
+
+class Vehicle {
+    public void start() {
+        System.out.println("Starting vehicle...");
+    }
+}
+
+class Bike extends Vehicle {
+    public void ride() {
+        System.out.println("Currently riding");
     }
 }

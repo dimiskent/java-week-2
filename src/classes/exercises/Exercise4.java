@@ -13,6 +13,39 @@ public class Exercise4
 {
     public static void main(String[] args)
     {
-        // TODO: Implement all requirements and test them
+        // Inner class.
+        Exercise4 outerClass = new Exercise4();
+        Inner inner = outerClass.new Inner();
+        inner.say();
+
+        // Abstract Animal, Override Cat
+        Animal cat = new Cat();
+        cat.sound();
+
+        // Final class
+        MathUtil math = new MathUtil();
+        System.out.println(math.square(4));
+    }
+    class Inner {
+        public void say() {
+            System.out.println("hi");
+        }
+    }
+}
+
+abstract class Animal {
+    abstract void sound();
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("MEOW");
+    }
+}
+
+final class MathUtil {
+    public int square(int n) {
+        return n*n;
     }
 }

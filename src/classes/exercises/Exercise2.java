@@ -13,6 +13,26 @@ public class Exercise2
 {
     public static void main(String[] args)
     {
-        // TODO: Create Person objects using both constructors
+        Person person1 = new Person();
+        Person person2 = new Person("Jean-Pierre Dupont", 21);
+        person1.showInfo();
+        person2.showInfo();
+    }
+}
+
+class Person {
+    private String name;
+    private int age;
+    public Person() {
+        this.name = "John Doe";
+        this.age = 18;
+    }
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public void showInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
     }
 }

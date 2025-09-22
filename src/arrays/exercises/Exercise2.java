@@ -12,6 +12,19 @@ public class Exercise2
 {
     public static void main(String[] args)
     {
-        // TODO: Implement exercise
+        int[][] numbers = {
+                {1, 3, 5},
+                {2, 4, 6}
+        };
+        int sum = 0;
+        int interval = 1;
+        for(int[] numberArray : numbers) {
+            System.out.println("Processing array " + interval++);
+            for(int number : numberArray) {
+                sum += number;
+                System.out.println(number);
+            }
+        }
+        System.out.println("Sum: " + sum);
     }
 }

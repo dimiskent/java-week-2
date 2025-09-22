@@ -10,10 +10,31 @@ package arrays.exercises;
  */
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class Exercise6
 {
     public static void main(String[] args)
     {
-        // TODO: Implement exercise
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = {2, 64, 32, 16, 128, 8, 4};
+        Arrays.sort(numbers);
+        int search;
+        while (true) {
+            System.out.print("Enter a number to search: ");
+            if(scanner.hasNextInt()) {
+                search = scanner.nextInt();
+                break;
+            } else {
+                scanner.next();
+                System.out.println("Please enter a whole number!");
+            }
+        }
+        int index = Arrays.binarySearch(numbers, search);
+        if(index < 0) {
+            System.out.println("Not found!");
+        } else {
+            System.out.printf("%d was found at index %d!", search, index);
+        }
     }
 }

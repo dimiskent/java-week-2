@@ -11,6 +11,12 @@ public class Exercise1
 {
     public static void main(String[] args)
     {
-        // TODO: Implement exercise
+        int[] numbers = { 2, 4, 7, 9, 18 };
+        int sum = 0;
+        for(int number : numbers) {
+            System.out.println(number);
+            sum += number;
+        }
+        System.out.println("Sum: " + sum);
     }
 }

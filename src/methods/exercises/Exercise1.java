@@ -1,5 +1,7 @@
 package methods.exercises;
 
+import classes.exercises.Exercise4;
+
 /**
  * Exercise 1: Basic Methods
  * -------------------------
@@ -18,7 +20,9 @@ public class Exercise1
         // Example usage
         System.out.println("Square of 4 = " + obj.square(4));
 
-        // TODO: Call cube() and sayHello() here
+        System.out.println("Cube of 4 = " + obj.cube(4));
+
+        obj.sayHello("Sam");
     }
 
     // Example method: square
@@ -27,9 +31,11 @@ public class Exercise1
         return num * num;
     }
 
-    // TODO: Write cube(int num)
+    public int cube(int num) { return num * num * num; }
 
-    // TODO: Write sayHello(String name)
+    public void sayHello(String name) {
+        System.out.println("Hello " + name);
+    }
 
 }
 

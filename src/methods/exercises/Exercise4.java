@@ -13,29 +13,32 @@ package methods.exercises;
 public class Exercise4
 {
 
-    // TODO: Constructor prints "Object created"
+    public Exercise4() {
+        System.out.println("Object created");
+    }
 
-    // TODO: Varargs method printStrings()
+    public void printStrings(String... words) {
+        for(String word : words) {
+            System.out.print(word + " ");
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args)
     {
-        // TODO: Test constructor
-
         Exercise4 obj = new Exercise4();
 
-        // TODO: Call printStrings with multiple arguments
+        obj.printStrings("The", "FitnessGram", "Pacer", "Test", "is", "a", "multistage", "aerobic", "capacity", "test");
 
-        Shape s1 = new Circle();
-//        s1.draw();
-
-        // TODO: Create Rectangle object and call draw()
+        Shape rectangle = new Rectangle();
+        rectangle.draw();
     }
 }
 
 
 abstract class Shape
 {
-    // TODO: declare abstract method draw()
+    abstract void draw();
 }
 
 class Circle extends Shape
@@ -47,5 +50,9 @@ class Circle extends Shape
     }
 }
 
-// TODO: Create Rectangle class that implements draw()
+class Rectangle extends Shape {
+    public void draw() {
+        System.out.println("Drawing a Rectangle");
+    }
+}
 
