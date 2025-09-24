@@ -29,7 +29,7 @@ class Person {
     }
     public Person(String name, int age) {
         this.name = name;
-        this.age = age;
+        this.age = age > 0 ? age : 1;
     }
     public void showInfo() {
         System.out.println("Name: " + name);
